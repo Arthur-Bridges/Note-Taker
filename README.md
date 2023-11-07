@@ -22,7 +22,7 @@ N/A
 
 Usage for this web application is very simple. 
 
-1. **Taking a Test:**
+1. **Taking Notes:**
 
 -Take notes.
 
@@ -30,7 +30,7 @@ Usage for this web application is very simple.
 
 2. **Results:**
 
--When finished and/or the done taking notes. 
+-When finished and/or the done taking notes you can retrieve and save the notes. 
 
 
 
@@ -51,6 +51,9 @@ N/A
 Photo of deployed Site: 
 
 Site: https://arthur-bridges.github.io/TestTaking-Website/
+
+## Questions
+For questions or inquiries, please contact me at: https://github.com/Arthur-Bridges or email me: arthurbridges08@yahoo.com
 
 
 ## Badges
