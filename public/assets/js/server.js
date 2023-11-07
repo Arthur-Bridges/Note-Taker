@@ -9,12 +9,12 @@ const app = express();
 app.use(express.static('public'));
 
 //retrieve
-app.get('', (req, res) => {
-
+app.get('/api/notes', (req, res) => {
+    res.json(notes);
 });
 
 //save/update
-app.post('', (req, res) => {
+app.post('/api/notes', (req, res) => {
     const updateNote = req.body;
 
     notes.push(updateNote);
@@ -22,6 +22,7 @@ app.post('', (req, res) => {
 });
 
 //delete
+//look into the delete method more
 app.delete('', (req, res) => {
 
 });
