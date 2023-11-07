@@ -26,3 +26,7 @@ app.post('/api/notes', (req, res) => {
 app.delete('', (req, res) => {
 
 });
+
+app.listen(PORT, () => {
+    console.log(`App listenening at: `);
+})
