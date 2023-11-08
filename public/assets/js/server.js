@@ -33,11 +33,11 @@ app.delete('/api/notes/:id', (req, res) => {
   
     const noteId = parseInt(req.params.id);
   
-  notes = notes.filter(note => note.id !== noteId);
+    notes = notes.filter(note => note.id !== noteId);
   
-  res.json({ 
+    res.json({ 
     
-    message: 'Deleted!!' 
+        message: 'Deleted!!' 
     
     });
 
