@@ -1,32 +1,45 @@
+//Handles
 const express = require('express');
-const path = require('path');
+const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3001;
 
-let notes = [];
 const app = express();
+let notes = [];
+//------------------------------------
+//USE
+app.use(bodyParser.json());
+app.use(express.static('public')); 
 
-app.use(express.static('public'));
-
-//retrieve
+// GET/FETCH data
 app.get('/api/notes', (req, res) => {
-    res.json(notes);
+  res.json(notes);
 });
 
-//save/update
+// POST/UPDATE data
 app.post('/api/notes', (req, res) => {
-    const updateNote = req.body;
-
-    notes.push(updateNote);
-    res.json(updateNote);
+  const note = {
+    id: Date.now(), 
+    title: req.body.title,
+    text: req.body.text
+  };
+  
+  notes.push(note);
+  res.json(note);
 });
 
-//delete
-//look into the delete method more
-app.delete('', (req, res) => {
-
+// DELETE 
+app.delete('/api/notes/:id', (req, res) => {
+  
+    const noteId = parseInt(req.params.id);
+  
+  notes = notes.filter(note => note.id !== noteId);
+  
+  res.json({ 
+    message: 'Deleted' 
+});
 });
 
 app.listen(PORT, () => {
-    console.log(`App listenening at: `);
+  console.log(`Server is running on port ${PORT}`);
 });
