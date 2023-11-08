@@ -36,7 +36,9 @@ app.delete('/api/notes/:id', (req, res) => {
   notes = notes.filter(note => note.id !== noteId);
   
   res.json({ 
-    message: 'Deleted' 
+    
+    message: 'Deleted!!' 
+    
     });
 
 });
