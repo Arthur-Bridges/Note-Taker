@@ -37,7 +37,8 @@ app.delete('/api/notes/:id', (req, res) => {
   
   res.json({ 
     message: 'Deleted' 
-});
+    });
+
 });
 
 app.listen(PORT, () => {
