@@ -8,9 +8,8 @@ const app = express();
 let notes = [];
 //------------------------------------
 //USE
+app.use(express.json());
 app.use(express.static('public'));
-app.use();
-app.use();
 
 // GET/FETCH data
 app.get('/api/notes', (req, res) => {
