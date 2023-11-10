@@ -1,6 +1,6 @@
 //Handles
 const express = require('express');
-const bodyParser = require('body-parser');
+
 
 const PORT = process.env.PORT || 3001;
 
@@ -8,8 +8,9 @@ const app = express();
 let notes = [];
 //------------------------------------
 //USE
-app.use(bodyParser.json());
-app.use(express.static('public')); 
+app.use(express.static('public'));
+app.use();
+app.use();
 
 // GET/FETCH data
 app.get('/api/notes', (req, res) => {
