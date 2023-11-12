@@ -1,4 +1,3 @@
-//may have to add module
 let noteForm;
 let noteTitle;
 let noteText;
