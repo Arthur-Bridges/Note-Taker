@@ -8,10 +8,16 @@ let notes = [];
 //------------------------------------
 //USE
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/api', api);
 
 // GET/FETCH data
 app.get('/notes', (req, res) => {
+  res.json(notes);
+});
+
+app.get('/api/notes', (req, res) => {
   res.json(notes);
 });
 
