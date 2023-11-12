@@ -11,12 +11,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // GET/FETCH data
-app.get('/api/notes', (req, res) => {
+app.get('/notes', (req, res) => {
   res.json(notes);
 });
 
 // POST/UPDATE data
-app.post('/api/notes', (req, res) => {
+app.post('/notes', (req, res) => {
   const note = {
     id: Date.now(), 
     title: req.body.title,
@@ -28,7 +28,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 // DELETE 
-app.delete('/api/notes/:id', (req, res) => {
+app.delete('/notes/:id', (req, res) => {
   
     const noteId = parseInt(req.params.id);
   
