@@ -14,15 +14,17 @@ app.use('/api', api);
 
 // GET/FETCH data
 app.get('/notes', (req, res) => {
-  res.json(notes);
+  res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
 app.get('/api/notes', (req, res) => {
   res.json(notes);
+  res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
 // POST/UPDATE data
 app.post('/notes', (req, res) => {
+  console.info(`${req.method} request received to update a note`);
   const note = {
     id: Date.now(), 
     title: req.body.title,
