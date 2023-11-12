@@ -1,6 +1,6 @@
 //Handles
 import express from 'express';
-
+import path from 'path';
 const PORT = process.env.PORT || 3006;
 
 const app = express();
